@@ -1,3 +1,6 @@
-# am start -a android.intent.action.ACTION_REQUEST_SHUTDOWN
-Starting: Intent { act=android.intent.action.ACTION_REQUEST_SHUTDOWN }
-[i]blah, blah, blah[/i] requires android.permission.SHUTDOWN
+Intent i = new Intent("android.intent.action.ACTION_REQUEST_SHUTDOWN");
+i.putExtra("android.intent.extra.KEY_CONFIRM", true);
+startActivity(i);
+
+
+
